@@ -2,7 +2,7 @@
 // Platform: LeetCode
 // Approach: Binary Search
 // Time Complexity: O(log n)
-// Space Complexity: O(1)
+// Space Complexity: O(1) 
 
 // Explanation:
 // Use binary search to find the target.
