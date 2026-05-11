@@ -8,6 +8,7 @@
 // Extract digits using modulo and division.
 // Use stack to preserve original digit order.
 // Push separated digits into answer vector.
+
 class Solution {
 public:
     void breakNum(int n, vector<int>& ans){
