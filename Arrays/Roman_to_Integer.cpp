@@ -1,0 +1,40 @@
+// Problem: Roman to Integer
+// Platform: LeetCode
+// Approach: Hash Map + Traversal
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+// Explanation:
+// Traverse the string.
+// If current Roman value is smaller than next value,
+// subtract it.
+// Otherwise, add it.
+
+class Solution {
+public:
+    int romanToInt(string s) {
+        unordered_map<char, int> mp = {
+            {'I', 1},
+            {'V', 5},
+            {'X', 10},
+            {'L', 50},
+            {'C', 100},
+            {'D', 500},
+            {'M', 1000}
+        };
+
+        int ans = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            // If current value is smaller than next value, subtract it
+            if (i + 1 < s.length() && mp[s[i]] < mp[s[i + 1]]) {
+                ans -= mp[s[i]];
+            }
+            else {
+                ans += mp[s[i]];
+            }
+        }
+
+        return ans;
+    }
+};
